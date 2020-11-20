@@ -23,7 +23,9 @@ body {
     #CECECE;
   color: #2E2F22;
   font-weight: normal;
-  min-width: 1240px;
+  min-width: 1000px;
+  width: 100%;
+  height: 100%;
 }
 
 a {
@@ -61,7 +63,7 @@ img {
 }
 
 .content-wrapper {
-  width: 1200px;
+  width: 100%;
   padding: 0 20px;
   margin: 0 auto;
   display: -moz-flex;
@@ -94,6 +96,8 @@ img {
 
 .page-header {
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .page-header .content-wrapper {
@@ -162,11 +166,6 @@ img {
   transition: all 0.3s ease;
 }
 
-.main-poster {
-  width: 100%;
-  height: auto;
-}
-
 .main-poster::after {
   content: '';
   background: url(../img/arrow.png) no-repeat;
@@ -191,11 +190,12 @@ img {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   max-width: 1200px;
+  
 }
 
 .title-wrap {
   position: relative;
-  display: -webkit-box;
+  /*display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
@@ -204,8 +204,7 @@ img {
   flex-direction: column;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start;
-  height: auto;
+  align-items: flex-start;*/
 }
 
 .header_title {
@@ -233,7 +232,7 @@ img {
 }
 
 .header-tel:nth-child(3) {
-  margin-bottom: 6em;
+  margin-bottom: 5em;
 }
 
 .header-top {
@@ -302,15 +301,38 @@ img {
   padding-left: 1em;
 }
 
-@media screen and (max-width: 698px)
-.header_title {
-    font-size: 4.7em;
-    letter-spacing: 5px;
+@media screen and (min-width: 1000px) and (max-width: 1800px) {
+    .header_title {
+    font-size: 4em;
+    line-height: 1em;
 }
 
-@media screen and (max-width: 1540px)
-.header_title {
-    font-size: 6em;
+  .header-tel {
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+
+  .header-tel:nth-child(3) {
+    margin-bottom: 3em;
+  }
+
+  .header-top {
+    font-size: 2em;
+  }
+
+  .title-bottom {
+    font-size: 2.5em;
+  }
+
+  .title-wrap .button-form,
+  .title-wrap .button-form:hover {
+    padding: 1.2em 1.8em;
+    border-radius: 0.5em;
+    font-size: 1em;
+    line-height: 1em;
+    letter-spacing: 0.15em;
+    margin-top: 2em;
+  }
 }
 
 @media screen and (max-width: 698px) {
